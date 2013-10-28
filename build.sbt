@@ -3,7 +3,7 @@ import com.typesafe.tools.mima.plugin.MimaKeys.previousArtifact
 
 name := "scalacheck"
 
-version := "1.10.1"
+version := "1.10.2"
 
 organization := "org.scalacheck"
 
@@ -30,7 +30,7 @@ libraryDependencies <++= (scalaVersion){sVer =>
 
 libraryDependencies <++= (scalaVersion){sVer =>
   if((sVer startsWith "2.9") || (sVer startsWith "2.10")) Seq.empty
-  else Seq("org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.0-RC3")
+  else Seq("org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.0-RC4")
 }
 
 javacOptions ++= Seq("-Xmx1024M")
